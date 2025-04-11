@@ -16,6 +16,7 @@ public class ProgressRequest {
     public void setUserId(Long userId) {
         this.userId = userId;
     }
+    
 
     public Long getCourseId() {
         return courseId;

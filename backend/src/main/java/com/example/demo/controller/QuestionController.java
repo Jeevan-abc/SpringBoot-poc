@@ -13,6 +13,7 @@ import com.example.demo.entity.Questions;
 import com.example.demo.repository.CourseRepository;
 import com.example.demo.repository.QuestionRepository;
 
+
 @RestController
 @RequestMapping("/api/questions")
 public class QuestionController {
@@ -55,5 +56,6 @@ public class QuestionController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    
 
 }

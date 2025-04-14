@@ -26,8 +26,8 @@ function RegistrationForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch("http://localhost:8080/api/users/add", {
+    try {                         
+      const response = await fetch(`${process.env.REACT_APP_FRONTEND_URL}/api/users/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

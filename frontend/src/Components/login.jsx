@@ -15,7 +15,7 @@ function Login() {
   const login = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8080/api/users/login", {
+      const response = await fetch(`${process.env.REACT_APP_FRONTEND_URL}/api/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -28,7 +28,7 @@ function Login() {
         localStorage.setItem("email", email);
         console.log(data.token);
         const userDetailsResponse = await fetch(
-          `http://localhost:8080/api/users/details?email=${email}`
+          `${process.env.REACT_APP_FRONTEND_URL}/api/users/details?email=${email}`
         );
 
         if (userDetailsResponse.ok) {
